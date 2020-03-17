@@ -1,0 +1,3 @@
+<permissions>
+    <permission end-point="/askQuestion" role="USER"/>
+</permissions>

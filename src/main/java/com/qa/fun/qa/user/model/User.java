@@ -26,6 +26,9 @@ public class User extends BaseEntity {
 	@Column(name = "USER_PASSWORD")
 	private String password;
 
+	@Column(name = "USER_ROLE")
+	private String userRole;
+	
 	@OneToMany(mappedBy = "id", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	private Set<Answer> answers;
 
@@ -101,6 +104,14 @@ public class User extends BaseEntity {
 
 	public void setAnswerVotes(Set<AnswerVote> answerVotes) {
 		this.answerVotes = answerVotes;
+	}
+
+	public String getUserRole() {
+		return userRole;
+	}
+
+	public void setUserRole(String userRole) {
+		this.userRole = userRole;
 	}
 
 	@Override
